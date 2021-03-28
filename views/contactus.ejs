@@ -1,0 +1,51 @@
+<%- include("partials/header") %>
+<div class="jumbotron jumbotron-fluid" style="background-image: url(https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80);height: 300px;width: 100%;background-repeat: no-repeat;background-size: cover;">
+  <div class="container">
+    <h1 class="display-4">Contact Us</h1>
+    <p class="lead">Your Need is our Demand</p>
+  </div>
+</div>
+<div class="row">
+	<div class="container">
+	<div class="wrapper">
+      <div class="title">
+Email Us
+		</div>
+	<div class="company-info">
+        <h3>TRIPeTRIP</h3>
+        <ul>
+          <li><i class="fa fa-road"></i> New Delhi,India</li>
+          <li><i class="fa fa-phone"></i> 7070696968</li>
+          <li><i class="fa fa-envelope"></i> https://tripetrip.in/</li>
+        </ul>
+      </div>
+<form action="/send" method="POST">
+    <div class="field">
+          <input type="text" name="username">
+          <label>Name</label>
+    </div>
+    <div class="field">
+          <input type="text" name="company">
+          <label>Company Name</label>
+    </div>
+	<div class="field">
+          <input type="email" name="email">
+          <label>Email</label>
+    </div>
+	<div class="field">
+          <input type="text" name="phone">
+          <label>PhoneNumber</label>
+    </div>
+	<div class="field">
+          <input type="text" name="message">
+          <label>Message</label>
+    </div>
+	<div class = "field">
+		<input class = "field" type="submit" value="Submit!">
+	</div>
+    
+</form>
+</div>
+</div>
+
+<%- include("partials/footer") %>
