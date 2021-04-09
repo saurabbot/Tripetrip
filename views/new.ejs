@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+
+<div class="container">
+    <div class="row">
+            <h1 style="text-align: center;">Add Review to<%=pack.name%></h1>
+            <div style="width: 500px;height: 400px; margin: 10px auto;padding: 40px;align-item: center;">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" style="width: 210px;padding-left: 70px;border-radius: 50px;">
+                <form action="/packages/<%=pack._id%>/reviews" method="POST">
+                    <div class="form-group" style="margin: 5px;">
+                         <input class="form-control" type="text" name="review[text]" placeholder="text"> 
+                    </div>
+                    <div class="form-group" >
+                          <button class="btn btn-lg btn-primary btn-block">POST Review</button>
+                    </div>
+                </form>
+            <a href="/packages">Go Back</a>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer") %>

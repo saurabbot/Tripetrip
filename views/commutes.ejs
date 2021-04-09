@@ -1,0 +1,107 @@
+<%- include("partials/header") %>
+<style>
+	.row{
+		margin: 10px;
+	}
+	div.scroll{
+		width: 1220px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		white-space: nowrap;
+	}
+</style>
+<div class="container">
+	<div class="row scroll" style="height: 300px;">
+		<div>
+			<h2 style="color: purple;"><strong>CARS Available</strong></h2>
+		</div>
+		<%car.forEach(function(car){%>
+			<div class="card" style="width: 18rem;margin: 5px;border-radius: 40px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+			  <img class="card-img-top" src="<%=car.image%>" alt="Card image cap" style="border-radius: 40px;">
+			  <div class="card-img-overlay">
+				  <h3 style="color: yellow;"><strong>₹<%=car.price%></strong></h3>
+		          <a href="/commutes/car/<%=car._id%>" class="badge badge-pill badge-info"><span class="material-icons">shopping_basket</span></a>
+				</div>
+			  <div class="card-body">
+				<h3><%=car.brand%> <%=car.model%>(<%=car.seats%>seater)</h3>
+				<p class="card-text"></p>
+				
+			  </div>
+			</div>
+			
+		<%})%>
+	</div>
+	<div class="row scroll">
+		
+		<div>
+			<h2 style="color: purple;"><strong>Bikes Available</strong></h2>
+		</div>
+		<%bike.forEach(function(car){%>
+			<div class="card" style="width: 18rem;border-radius: 40px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+			  <img class="card-img-top" src="<%=car.image%>" alt="Card image cap" style="border-radius: 40px;">
+			  <div class="card-img-overlay">
+				  <h3 style="color: yellow;"><strong>₹<%=car.price%></strong></h3>
+		          <a href="#" class="badge badge-pill badge-info"><span class="material-icons">shopping_basket</span></a>
+				</div>
+			  <div class="card-body">
+				<h3><%=car.brand%><%=car.model%></h3>
+				<p class="card-text"></p>
+				
+			  </div>
+			</div>
+		<%})%>
+	</div>
+	<div class="row scroll">
+		<div>
+			<h2 style="color: purple;"><strong>Travellers Available</strong></h2>
+		</div>
+		<%traveller.forEach(function(car){%>
+			<div class="card" style="width: 18rem;border-radius: 40px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+			  <img class="card-img-top" src="<%=car.image%>" alt="Card image cap" style="border-radius: 40px;">
+			  <div class="card-img-overlay">
+				  <h3 style="color: yellow;"><strong>₹<%=car.price%></strong></h3>
+		          <a href="#" class="badge badge-pill badge-info"><span class="material-icons">shopping_basket</span></a>
+				</div>
+			  <div class="card-body">
+				<h3><%=car.name%>(<%=car.seats%>seater)</h3>
+				<p class="card-text"></p>
+				
+			  </div>
+			</div>
+		<%})%>
+		
+	</div>
+	<div class="row scroll">
+		<div>
+			<h2 style="color: purple;"><strong>Buses Available</strong></h2>
+		</div>
+		<%bus.forEach(function(car){%>
+			<div class="card" style="width: 18rem;border-radius: 40px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+			  <img class="card-img-top" src="<%=car.image%>" alt="Card image cap" style="border-radius: 40px;">
+			  <div class="card-img-overlay">
+				  <h3 style="color: yellow;"><strong>₹<%=car.price%></strong></h3>
+		          <a href="#" class="badge badge-pill badge-info"><span class="material-icons">shopping_basket</span></a>
+				</div>
+			  <div class="card-body">
+				<h3><%=car.brand%> <%=car.model%></h3>
+				<p class="card-text"></p>
+				
+			  </div>
+			</div>
+		<%})%>
+	</div>
+	
+</div>
+<% if(currentUser && currentUser.isAdmin){ %>
+<a class="btn btn-primary" href="/commutes/carnew" role="button">Add cars</a>
+<%} %>
+<% if(currentUser && currentUser.isAdmin){ %>
+<a class="btn btn-primary" href="/commutes/bikenew" role="button">Add bike</a>
+<%} %>
+<% if(currentUser && currentUser.isAdmin){ %>
+<a class="btn btn-primary" href="/commutes/travellernew" role="button">Add traveller</a>
+<%} %>
+<% if(currentUser && currentUser.isAdmin){ %>
+<a class="btn btn-primary" href="/commutes/busnew" role="button">Add bus</a>
+<%} %>
+<%- include("partials/footer") %>

@@ -1,0 +1,61 @@
+<%- include("partials/header") %>
+<style>
+	.btn{
+		width: 500px;
+		display: inline-block;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.wrap{
+		margin: 20px;
+		padding: 20px;
+	}
+</style>
+<div class="container">
+	<div class="wrap">
+		<form action="/packages" method="POST">
+			<div class="form-group">
+				<label for="name">Name</label>
+                <input class="form-control" type="text" name="name" id="name" placeholder="Name of Package">
+			</div>
+			<div class="form-group">
+				<label for="image">Image URl</label>
+				<input class="form-control" type="text" name="image" id="image" placeholder="https://source.unsplash.com/TCCCKgdFmBo">
+				
+			</div>
+			<div class="form-group">
+				<label for="Itternary">Itternary</label>
+				<input class="form-control" type="text" name="Itternary" id="Itternary">
+				<!-- <textarea class="form-control" type="text" name="Itternary" rows="12"></textarea> -->
+			</div>
+			<div class="form-group">
+				<label for="description">Description</label>
+				<input class="form-control" type="text" name="description" id="description">
+				<!-- <textarea class="form-control" type="text" name="description" rows="13"></textarea> -->
+			</div>
+			<div class="form-group">
+				<label for="PTV">Places To Visit</label>
+				<input class="form-control" type="text" name="PTV" id="PTV">
+				<!-- <textarea class="form-control" type="text" name="PTV" rows="13"></textarea> -->
+			</div>
+			<div class="form-group">
+				<label for="smdesc">Small description</label>
+				<input class="form-control" type="text" name="smdesc" id="smdesc">
+				
+			</div>
+			<div class="form-group">
+				<label for="agency">Company agency</label>
+				<input class="form-control" type="text" name="agency" id="agency">
+				
+			</div>
+			<div class="form-group">
+				<label for="price">Amount</label>
+				<input class="form-control" type="number" name="price" id="price">
+			</div>
+			<div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Add to database</button>
+            </div>
+		</form>
+	</div>
+</div>
+<%- include("partials/footer") %>

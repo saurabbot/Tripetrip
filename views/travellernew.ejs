@@ -1,0 +1,27 @@
+<%- include("partials/header") %>
+<form action="/commutes/travellernew" method="POST">
+	<div class="form-group">
+				<label for="name">Name</label>
+                <input class="form-control" type="text" name="name" id="name" placeholder="Brand">
+	</div>
+	<div class="form-group">
+				<label for="image">Image URl</label>
+				<input class="form-control" type="text" name="image" id="image" placeholder="https://source.unsplash.com/TCCCKgdFmBo">
+	</div>
+	<div class="form-group">
+				<label for="price">Amount</label>
+				<input class="form-control" type="number" name="price" id="price">
+	</div>
+	<div class="form-group">
+				<label for="price">Power</label>
+				<input class="form-control" type="number" name="power" id="power">
+	</div>
+	<div class="form-group">
+				<label for="price">Seats</label>
+				<input class="form-control" type="number" name="seats" id="seats">
+	</div>
+	<div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Add to database</button>
+    </div>
+</form>
+<%- include("partials/footer") %>

@@ -1,0 +1,27 @@
+<%- include("partials/header") %>
+<form action="/commutes/busnew" method="POST">
+	<div class="form-group">
+				<label for="name">Brand</label>
+                <input class="form-control" type="text" name="brand" id="brand" placeholder="Brand">
+	</div>
+	<div class="form-group">
+				<label for="image">Image URl</label>
+				<input class="form-control" type="text" name="image" id="image" placeholder="https://source.unsplash.com/TCCCKgdFmBo">
+	</div>
+	<div class="form-group">
+				<label for="image">Model</label>
+				<input class="form-control" type="text" name="model" id="model" placeholder="Model">
+	</div>
+	<div class="form-group">
+				<label for="price">Amount</label>
+				<input class="form-control" type="number" name="price" id="price">
+	</div>
+	<div class="form-group">
+				<label for="price">Power</label>
+				<input class="form-control" type="number" name="power" id="power">
+	</div>
+	<div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Add to database</button>
+    </div>
+</form>
+<%- include("partials/footer") %>
